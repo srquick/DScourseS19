@@ -1,3 +1,0 @@
-SQL Code
-
-CREATE TABLE PS3
