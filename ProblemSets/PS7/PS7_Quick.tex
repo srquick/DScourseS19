@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS7}
+\author{Sam Quick}
+\date{March 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary Initial}
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Thu, Mar 11, 2019 - 10:23:01
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+logwage & 1,669 & 1.625 & 0.386 & 0.005 & 1.362 & 1.936 & 2.261 \\ 
+hgc & 2,229 & 13.101 & 2.524 & 0 & 12 & 15 & 18 \\ 
+tenure & 2,229 & 5.971 & 5.507 & 0.000 & 1.583 & 9.333 & 25.917 \\ 
+age & 2,229 & 39.152 & 3.062 & 34 & 36 & 42 & 46 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+Logwages are missing at a rate of approx. 25 percent of the time, as 560 are missing out of 2229 observations in the table. 
+The variable is most likely to be MNAR
+
+Of all the methods, it appears that the Mice package gave the best estimation of the Beta value. The different imputation methods, excluding the first, appear to shift the data away from the true beta value of the dependent variables. 
+
+\section{Project Update}
+
+I do not want to lie to you, but I also do not want to disappoint you. I have not made much progress on my project as of yet, though I have a plan to hit the grindstone directly after Spring Break is over and I am back from Europe.
+
+I am considering utilizing the stock prices of OIL & GAS companies to measure something, though not entirely sure as of yet.
+
+
+
+
+\section{Final Visual to Include below}
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Thu, Mar 11, 2019 - 10:15:08
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{logwage} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ hgc & 0.062$^{***}$ & 0.050$^{***}$ & 0.062$^{***}$ \\ 
+  & (0.005) & (0.004) & (0.005) \\ 
+  & & & \\ 
+ collegenot college grad & 0.145$^{***}$ & 0.168$^{***}$ & 0.145$^{***}$ \\ 
+  & (0.034) & (0.026) & (0.034) \\ 
+  & & & \\ 
+ tenure & 0.050$^{***}$ & 0.038$^{***}$ & 0.050$^{***}$ \\ 
+  & (0.005) & (0.004) & (0.005) \\ 
+  & & & \\ 
+ I(tenure$\hat{\mkern6mu}$2) & $-$0.002$^{***}$ & $-$0.001$^{***}$ & $-$0.002$^{***}$ \\ 
+  & (0.0003) & (0.0002) & (0.0003) \\ 
+  & & & \\ 
+ age & 0.0004 & 0.0002 & 0.0004 \\ 
+  & (0.003) & (0.002) & (0.003) \\ 
+  & & & \\ 
+ marriedsingle & $-$0.022 & $-$0.027$^{**}$ & $-$0.022 \\ 
+  & (0.018) & (0.014) & (0.018) \\ 
+  & & & \\ 
+ Constant & 0.534$^{***}$ & 0.708$^{***}$ & 0.534$^{***}$ \\ 
+  & (0.146) & (0.116) & (0.146) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & 1,669 & 2,229 & 1,669 \\ 
+R$^{2}$ & 0.208 & 0.147 & 0.208 \\ 
+Adjusted R$^{2}$ & 0.206 & 0.145 & 0.206 \\ 
+Residual Std. Error & 0.344 (df = 1662) & 0.308 (df = 2222) & 0.344 (df = 1662) \\ 
+F Statistic & 72.917$^{***}$ (df = 6; 1662) & 63.973$^{***}$ (df = 6; 2222) & 72.917$^{***}$ (df = 6; 1662) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+
+
+
+
+
+
+
+
+
+\end{document}
