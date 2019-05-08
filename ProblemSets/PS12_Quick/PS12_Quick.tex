@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Quick_PS12}
+\author{Sam Quick}
+\date{May 2019}
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Body}
+
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Thu, May 02, 2019 - 16:19:46
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Mean} & \multicolumn{1}{c}{St. Dev.} & \multicolumn{1}{c}{Min} & \multicolumn{1}{c}{Pctl(25)} & \multicolumn{1}{c}{Pctl(75)} & \multicolumn{1}{c}{Max} \\ 
+\hline \\[-1.8ex] 
+logwage & 1,545 & 1.652 & 0.688 & $-$0.956 & 1.201 & 2.120 & 4.166 \\ 
+hgc & 2,229 & 12.455 & 2.444 & 5 & 11 & 14 & 18 \\ 
+exper & 2,229 & 6.435 & 4.867 & 0.000 & 2.452 & 9.778 & 25.000 \\ 
+kids & 2,229 & 0.429 & 0.495 & 0 & 0 & 1 & 1 \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+
+Question:At what rate are log wages missing? Do you think the logwage variable is most likely to be MCAR, MAR, or MNAR?
+\\~\\
+Answer: The results seem to make sense.  The variable is most likely to be MNAR, because the missing values are can be likely attributed to personal characteristics and family circumstances that keep folks from reporting wage.
+
+\\~\\
+\section{Body 2}
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & mean\_logwage & logwage \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ hgc & 0.036$^{***}$ & 0.059$^{***}$ \\ 
+  & (0.006) & (0.009) \\ 
+  & & \\ 
+ exper & 0.021$^{***}$ & 0.050$^{***}$ \\ 
+  & (0.007) & (0.013) \\ 
+  & & \\ 
+ I(exper$\hat{\mkern6mu}$2) & $-$0.001$^{***}$ & $-$0.004$^{***}$ \\ 
+  & (0.0004) & (0.001) \\ 
+  & & \\ 
+ college1 & $-$0.126$^{***}$ & $-$0.065 \\ 
+  & (0.048) & (0.106) \\ 
+  & & \\ 
+ union1 & 0.068 & 0.222$^{**}$ \\ 
+  & (0.047) & (0.087) \\ 
+  & & \\ 
+ Constant & 1.149$^{***}$ & 0.834$^{***}$ \\ 
+  & (0.078) & (0.113) \\ 
+  & & \\ 
+\hline \\[-1.8ex] 
+Observations & 2,229 & 1,545 \\ 
+R$^{2}$ & 0.020 & 0.038 \\ 
+Adjusted R$^{2}$ & 0.018 & 0.035 \\ 
+Residual Std. Error & 0.568 (df = 2223) & 0.676 (df = 1539) \\ 
+F Statistic & 9.207$^{***}$ (df = 5; 2223) & 12.106$^{***}$ (df = 5; 1539) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+\\~\\
+The true value is
+1 = 0.091. Comment on the differences of it across the models.
+What patterns do you see? What can you conclude about the veracity of the various imputation methods?
+\\~\\
+Answers: I will be honest here in saying that I have confused myself by my inability to get the code to work. Though, I would say that the imp.deletion model worked best in producing the closest value to the true B1 value.
+
+\\~\\
+Missing the Selection/Valid column in table, because I could not figure out the coding issue i was having - stack overflow was not helpful and I could not find anything in the notes. Please see R-code to understand.
+
+\end{document}
